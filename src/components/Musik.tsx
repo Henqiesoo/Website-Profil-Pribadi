@@ -6,10 +6,10 @@ import { Reveal } from "./Reveal";
 
 /** Tempo hanyut dibuat tidak sama dan tidak berkelipatan, supaya kartunya
  *  tidak pernah kembali serentak dan gerakannya terbaca acak. */
-const TEMPO = ["17s", "23s", "19s", "27s", "21s", "25s", "18s"];
-const JEDA = ["0s", "-3s", "-7s", "-1s", "-5s", "-9s", "-2s"];
+const TEMPO = ["17s", "23s", "19s", "27s", "21s", "25s", "18s", "29s"];
+const JEDA = ["0s", "-3s", "-7s", "-1s", "-5s", "-9s", "-2s", "-4s"];
 /** Jarak parallax; makin besar makin terasa dekat ke pembaca. */
-const JAUH = ["34px", "14px", "40px", "20px", "44px", "16px", "30px"];
+const JAUH = ["34px", "14px", "40px", "20px", "44px", "16px", "30px", "24px"];
 
 export function Musik() {
   const { musik } = profil;

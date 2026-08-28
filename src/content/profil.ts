@@ -185,13 +185,14 @@ export const profil = {
   musik: {
     judul: "Musik",
     catatan:
-      "Mengiringi di gereja, main di panggung, dan latihan di rumah. Sebagian foto sudah lama.",
+      "Mengiringi di gereja, main di panggung, dan latihan di rumah. Keyboard, piano, dan gitar. Sebagian foto sudah lama.",
     foto: [
       { src: "/musik-grand-senyum.jpg", w: 660, h: 495, alt: "Hengky duduk di depan grand piano", lebar: "28%", putar: "-4deg", turun: "0rem" },
       { src: "/musik-tangan-angkat.jpg", w: 495, h: 660, alt: "Hengky mengangkat kedua tangan di belakang keyboard", lebar: "19%", putar: "3deg", turun: "3rem" },
       { src: "/musik-panggung-topi.jpg", w: 495, h: 660, alt: "Hengky di belakang keyboard, dengan set drum di belakangnya", lebar: "21%", putar: "-2.5deg", turun: "-1.5rem" },
       { src: "/musik-latihan-hoodie.jpg", w: 660, h: 495, alt: "Hengky berlatih piano di rumah", lebar: "25%", putar: "4.5deg", turun: "4rem" },
-      { src: "/musik-ibadah-band.jpg", w: 626, h: 417, alt: "Hengky mengiringi di grand piano bersama tim musik gereja", lebar: "27%", putar: "-6deg", turun: "-2rem" },
+      { src: "/musik-yamaha-s950.jpg", w: 660, h: 495, alt: "Hengky bermain keyboard Yamaha PSR-S950", lebar: "27%", putar: "-6deg", turun: "-2rem" },
+      { src: "/musik-gitar-grup.jpg", w: 640, h: 640, alt: "Hengky bermain gitar akustik bersama beberapa orang lain", lebar: "23%", putar: "5deg", turun: "1.5rem" },
       { src: "/musik-roland.jpg", w: 495, h: 660, alt: "Hengky bermain keyboard Roland", lebar: "18%", putar: "2deg", turun: "2.5rem" },
       { src: "/musik-keyboard-kuning.jpg", w: 495, h: 660, alt: "Hengky bermain keyboard", lebar: "20%", putar: "-3.5deg", turun: "-1rem" },
     ],
