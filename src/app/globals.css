@@ -1,0 +1,207 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------
+   Sistem visual
+   Palet: kertas bone + tinta hijau hutan. Satu warna aksen saja.
+   Radius: 4px, dipakai di semua elemen tanpa kecuali.
+   --------------------------------------------------------------- */
+
+:root {
+  --paper: #f2f1ec;
+  --paper-sunk: #e7e5dd;
+  --ink: #14251d;
+  --ink-body: #3c4a43;
+  --ink-muted: #5c6862;
+  --line: rgba(20, 37, 29, 0.14);
+  --line-strong: rgba(20, 37, 29, 0.28);
+  --accent: #1e5a3f;
+  --accent-hover: #17452f;
+  --on-accent: #f2f1ec;
+
+  /* Blok gelap "Storytelling": satu-satunya pergantian nada di halaman. */
+  --block: #14332a;
+  --block-ink: #edeee8;
+  --block-muted: #9fb3a8;
+  --block-line: rgba(237, 238, 232, 0.18);
+
+  --radius: 4px;
+  --shell: 74rem;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0e1512;
+    --paper-sunk: #151e1a;
+    --ink: #e9eae4;
+    --ink-body: #b4bdb7;
+    --ink-muted: #808b85;
+    --line: rgba(233, 234, 228, 0.14);
+    --line-strong: rgba(233, 234, 228, 0.3);
+    --accent: #8ecfa9;
+    --accent-hover: #a8dcbe;
+    --on-accent: #0e1512;
+
+    --block: #16211c;
+    --block-ink: #edeee8;
+    --block-muted: #9fb3a8;
+    --block-line: rgba(237, 238, 232, 0.14);
+  }
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-sunk: var(--paper-sunk);
+  --color-ink: var(--ink);
+  --color-ink-body: var(--ink-body);
+  --color-ink-muted: var(--ink-muted);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-on-accent: var(--on-accent);
+  --color-block: var(--block);
+  --color-block-ink: var(--block-ink);
+  --color-block-muted: var(--block-muted);
+  --color-block-line: var(--block-line);
+  --font-sans: var(--font-geist-sans);
+  --radius-brand: var(--radius);
+  --ease-out: var(--ease-out);
+}
+
+html {
+  scrollbar-color: var(--line-strong) transparent;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink-body);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Permukaan bawaan browser ikut memakai palet halaman. */
+::selection {
+  background-color: var(--accent);
+  color: var(--on-accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: var(--radius);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line-strong);
+  border-radius: 999px;
+  border: 3px solid var(--paper);
+}
+
+/* Skala tipografi ------------------------------------------------
+   Ditaruh di layer `components` supaya utility Tailwind (mis. text-block-ink)
+   tetap bisa menimpa warnanya di blok gelap.
+   ---------------------------------------------------------------- */
+
+@layer components {
+  .display-xl {
+    font-size: clamp(3.5rem, 12vw, 6rem);
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .display-lg {
+    font-size: clamp(1.75rem, 5.2vw, 3.25rem);
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+    font-weight: 400;
+  }
+
+  .display-md {
+    font-size: clamp(1.75rem, 4.2vw, 2.75rem);
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+    font-weight: 500;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+
+  .display-sm {
+    font-size: clamp(1.375rem, 2.6vw, 1.75rem);
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .lede {
+    font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
+    line-height: 1.6;
+    letter-spacing: -0.011em;
+    max-width: 34ch;
+  }
+
+  .prose-body {
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    letter-spacing: -0.006em;
+    max-width: 64ch;
+  }
+}
+
+/* Gerak ----------------------------------------------------------- */
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rise {
+  opacity: 0;
+  animation: rise 620ms var(--ease-out) forwards;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 620ms var(--ease-out),
+    transform 620ms var(--ease-out);
+}
+
+.reveal[data-shown="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .rise {
+    animation: none;
+    opacity: 1;
+  }
+  .reveal {
+    transform: none;
+    transition: opacity 200ms linear;
+  }
+}
