@@ -4,6 +4,7 @@ import { Tombol } from "./Tautan";
 
 const tautan = [
   { label: "Profesi", href: "#profesi" },
+  { label: "Jasa", href: "#jasa" },
   { label: "Cerita", href: "#cerita" },
   { label: "Kontak", href: "#kontak" },
 ];

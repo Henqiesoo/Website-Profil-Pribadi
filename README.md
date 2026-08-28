@@ -29,14 +29,18 @@ Ubah file itu saja, tidak perlu menyentuh file lain. Yang perlu diisi:
    masing-masing punya `tampil` (teks yang terlihat) dan `url`. Untuk WhatsApp
    pakai format `https://wa.me/628...`. Baris yang `url`-nya dikosongkan tidak
    ditampilkan.
-3. **Pita berjalan.** `sorot` berisi daftar kata yang lewat di bawah hero.
+3. **Jasa.** `jasa` berisi paket, harga, tempo, dan isi tiap paket, ditambah
+   blok kelas privat dan tiga janji kerja. Nomor WA di bagian ini nomor usaha,
+   sengaja dipisah dari nomor pribadi di `kontak`.
 
-4. **Kolase.** `galeri.foto` berisi kartu-kartunya. `lebar` itu lebar kartu di
+4. **Pita berjalan.** `sorot` berisi daftar kata yang lewat di bawah hero.
+
+5. **Kolase.** `galeri.foto` berisi kartu-kartunya. `lebar` itu lebar kartu di
    layar lebar, `putar` kemiringannya, `turun` seberapa jauh kartu digeser ke
    bawah supaya barisnya tidak rata. `w` dan `h` harus sama dengan ukuran asli
    berkasnya, dipakai untuk mencegah pergeseran tata letak saat gambar dimuat.
 
-5. **Foto potret.** `potret` berisi daftar foto yang tampil bergantian di
+6. **Foto potret.** `potret` berisi daftar foto yang tampil bergantian di
    lingkaran hero. Taruh berkasnya di `public/`, lalu tulis path-nya di daftar
    itu. Menambah atau mengurangi foto cukup di daftar ini; tempo pergantiannya
    ikut menyesuaikan sendiri, tidak perlu menyentuh CSS. Kalau daftarnya

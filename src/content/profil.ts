@@ -61,6 +61,45 @@ export const profil = {
     },
   ],
 
+  /**
+   * Jasa yang dibuka. Harga dan tempo diambil dari brosur HENQIESOO.
+   * Nomor WA di sini nomor usaha, beda dari nomor pribadi di `kontak`.
+   */
+  jasa: {
+    judul: "Jasa",
+    catatan:
+      "Dikerjakan sendiri dari awal sampai jadi, bukan template yang tinggal ganti nama.",
+    paket: [
+      {
+        nama: "Undangan digital",
+        harga: "Mulai Rp 100rb",
+        tempo: "Jadi dalam 2 hari",
+        isi: ["RSVP otomatis", "Musik latar", "Peta lokasi", "Galeri foto"],
+      },
+      {
+        nama: "Website UMKM dan profil perusahaan",
+        harga: "Mulai Rp 1,5jt",
+        tempo: "Siap dalam 7 hari",
+        isi: [
+          "Profil usaha",
+          "Katalog produk",
+          "Tombol WhatsApp",
+          "Rapi di HP dan laptop",
+        ],
+      },
+    ],
+    kelas: {
+      nama: "Kelas privat",
+      isi: "Piano, gitar, dan cara memakai Claude AI. Satu per satu, materinya mengikuti murid.",
+    },
+    janji: [
+      "Dikerjakan langsung, bukan template massal",
+      "Revisi sampai sesuai",
+      "Harga jelas dari awal, tanpa nego berlarut",
+    ],
+    wa: { tampil: "0851 5766 9630", url: "https://wa.me/6285157669630" },
+  },
+
   /** Pita berjalan di bawah hero. Isinya apa yang benar-benar dia ajarkan. */
   sorot: [
     "PJOK",
