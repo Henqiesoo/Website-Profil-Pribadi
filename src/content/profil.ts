@@ -178,23 +178,22 @@ export const profil = {
   ],
 
   /**
-   * Kolase foto. `lebar` itu lebar kartu di layar lebar (persen dari
-   * kolomnya), `putar` kemiringannya, `turun` seberapa jauh kartu itu
-   * digeser ke bawah supaya barisnya tidak rata. Di layar kecil semua
-   * kartu memakai lebar yang sama.
+   * Kolase musik. Mekanismenya sama seperti sebelumnya (miring dan hanyut),
+   * isinya diganti dari selfie lama ke foto benar-benar bermain: kolase yang
+   * berenergi cocok untuk panggung, tidak cocok untuk foto liburan.
    */
-  galeri: {
-    judul: "Sehari-hari",
+  musik: {
+    judul: "Musik",
     catatan:
-      "Di luar kelas dan kamera. Foto lama, sebagian besar diambil sendiri.",
+      "Mengiringi di gereja, main di panggung, dan latihan di rumah. Sebagian foto sudah lama.",
     foto: [
-      { src: "/galeri-1.jpg", w: 464, h: 620, alt: "Hengky di depan papan nama Gereja Berea Sungrak Indonesia", lebar: "21%", putar: "-5deg", turun: "0rem" },
-      { src: "/galeri-2.jpg", w: 620, h: 414, alt: "Hengky di atas perahu kayu", lebar: "30%", putar: "3deg", turun: "3rem" },
-      { src: "/galeri-3.jpg", w: 497, h: 620, alt: "Hengky di tepi laut", lebar: "19%", putar: "-2.5deg", turun: "-1.5rem" },
-      { src: "/galeri-4.jpg", w: 620, h: 620, alt: "Hengky memberi makan seekor burung", lebar: "24%", putar: "4.5deg", turun: "4rem" },
-      { src: "/galeri-5.jpg", w: 465, h: 620, alt: "Hengky berdiri di dermaga", lebar: "17%", putar: "-6deg", turun: "-2rem" },
-      { src: "/galeri-6.jpg", w: 620, h: 620, alt: "Hengky di dalam ruangan", lebar: "22%", putar: "2deg", turun: "2.5rem" },
-      { src: "/galeri-7.jpg", w: 496, h: 620, alt: "Hengky mengenakan hoodie kuning", lebar: "20%", putar: "-3.5deg", turun: "-1rem" },
+      { src: "/musik-grand-cermin.jpg", w: 660, h: 495, alt: "Hengky bermain grand piano, bayangannya terpantul di tutup piano", lebar: "28%", putar: "-4deg", turun: "0rem" },
+      { src: "/musik-grand-topeng.jpg", w: 495, h: 660, alt: "Hengky bermain piano", lebar: "19%", putar: "3deg", turun: "3rem" },
+      { src: "/musik-panggung-topi.jpg", w: 495, h: 660, alt: "Hengky di belakang keyboard, dengan set drum di belakangnya", lebar: "21%", putar: "-2.5deg", turun: "-1.5rem" },
+      { src: "/musik-latihan-hoodie.jpg", w: 660, h: 495, alt: "Hengky berlatih piano di rumah", lebar: "25%", putar: "4.5deg", turun: "4rem" },
+      { src: "/musik-ibadah-band.jpg", w: 626, h: 417, alt: "Hengky mengiringi di grand piano bersama tim musik gereja", lebar: "27%", putar: "-6deg", turun: "-2rem" },
+      { src: "/musik-roland.jpg", w: 495, h: 660, alt: "Hengky bermain keyboard Roland", lebar: "18%", putar: "2deg", turun: "2.5rem" },
+      { src: "/musik-keyboard-kuning.jpg", w: 495, h: 660, alt: "Hengky bermain keyboard", lebar: "20%", putar: "-3.5deg", turun: "-1rem" },
     ],
   },
 

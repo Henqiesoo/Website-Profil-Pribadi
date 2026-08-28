@@ -44,10 +44,11 @@ Ubah file itu saja, tidak perlu menyentuh file lain. Yang perlu diisi:
 
 5. **Pita berjalan.** `sorot` berisi daftar kata yang lewat di bawah hero.
 
-6. **Kolase.** `galeri.foto` berisi kartu-kartunya. `lebar` itu lebar kartu di
-   layar lebar, `putar` kemiringannya, `turun` seberapa jauh kartu digeser ke
-   bawah supaya barisnya tidak rata. `w` dan `h` harus sama dengan ukuran asli
-   berkasnya, dipakai untuk mencegah pergeseran tata letak saat gambar dimuat.
+6. **Kolase musik.** `musik.foto` berisi kartu-kartunya. `lebar` itu lebar
+   kartu di layar lebar, `putar` kemiringannya, `turun` seberapa jauh kartu
+   digeser ke bawah supaya barisnya tidak rata. `w` dan `h` harus sama dengan
+   ukuran asli berkasnya, dipakai untuk mencegah pergeseran tata letak saat
+   gambar dimuat.
 
 7. **Foto potret.** `potret` berisi daftar foto yang tampil bergantian di
    lingkaran hero. Taruh berkasnya di `public/`, lalu tulis path-nya di daftar
@@ -95,7 +96,7 @@ Arahnya jendela bidik, diambil dari bingkai REC di logo sendiri.
   Zoom, panning, parallax, dan lembar kontak foto. Bukan kumpulan efek lepas.
 - Pita berjalan di bawah hero, berisi mata pelajaran dan bidang yang diajarkan.
 - Nama di hero mengecil mengikuti gulir, seperti lensa yang menarik fokus.
-- Kolase "Sehari-hari" hanyut pelan dengan tempo berbeda-beda tiap kartu, dan
+- Kolase "Musik" hanyut pelan dengan tempo berbeda-beda tiap kartu, dan
   bergeser mengikuti gulir pada kecepatan berbeda supaya terasa berlapis.
   Tempo hanyutnya tidak berkelipatan, jadi kartunya tidak pernah kembali
   serentak dan gerakannya terbaca acak.
@@ -108,6 +109,8 @@ Arahnya jendela bidik, diambil dari bingkai REC di logo sendiri.
     simetris sempurna akan terlihat diam walau sedang berputar.
   - Fotonya berganti sendiri, satu foto 4,5 detik lalu larut 1,1 detik ke
     foto berikutnya.
+- Foto orang lain, terutama murid yang masih di bawah umur, tidak dipasang
+  tanpa izin tertulis dari orang tuanya.
 - Mode terang dan gelap mengikuti setelan sistem, keduanya lolos kontras
   WCAG AA pada semua teks yang diperiksa.
 - Semua animasi mati kalau pengunjung mengaktifkan `prefers-reduced-motion`.

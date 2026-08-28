@@ -11,23 +11,23 @@ const JEDA = ["0s", "-3s", "-7s", "-1s", "-5s", "-9s", "-2s"];
 /** Jarak parallax; makin besar makin terasa dekat ke pembaca. */
 const JAUH = ["34px", "14px", "40px", "20px", "44px", "16px", "30px"];
 
-export function Galeri() {
-  const { galeri } = profil;
+export function Musik() {
+  const { musik } = profil;
 
   return (
     <section
-      id="galeri"
+      id="musik"
       className="mx-auto max-w-[var(--shell)] overflow-hidden px-6 py-24 md:px-10 md:py-36"
     >
       <Reveal>
         <div style={{ marginLeft: "var(--nudge-1)" }}>
-          <h2 className="d-1">{galeri.judul}</h2>
-          <p className="prose-body mt-5 text-ink-muted">{galeri.catatan}</p>
+          <h2 className="d-1">{musik.judul}</h2>
+          <p className="prose-body mt-5 text-ink-muted">{musik.catatan}</p>
         </div>
       </Reveal>
 
       <ul className="mt-16 flex flex-wrap items-start justify-center gap-x-5 gap-y-10 md:mt-24 md:gap-x-8">
-        {galeri.foto.map((f, i) => (
+        {musik.foto.map((f, i) => (
           <li
             key={f.src}
             className="lapis"
