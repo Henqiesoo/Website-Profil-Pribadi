@@ -217,6 +217,16 @@ body {
   will-change: transform;
 }
 
+/* Silih ganti foto potret. Keyframe-nya ditulis komponen Potret sesuai
+   jumlah foto; di sini hanya sifat animasinya. */
+.salindia {
+  opacity: 0;
+  animation-name: salindia;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
 @keyframes rise {
   from {
     opacity: 0;
@@ -252,6 +262,13 @@ body {
   }
   .putar {
     animation: none;
+  }
+  .salindia {
+    animation: none;
+    opacity: 0;
+  }
+  .salindia:first-of-type {
+    opacity: 1;
   }
   .rise {
     animation: none;

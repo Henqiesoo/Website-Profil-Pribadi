@@ -15,13 +15,24 @@ export const profil = {
   },
 
   /**
-   * Foto potret untuk bagian hero.
-   * Taruh file foto di folder `public/`, lalu isi path-nya di sini,
-   * contoh: "/potret.jpg". Biarkan null kalau belum ada foto,
-   * nanti tampil monogram huruf H sebagai gantinya.
+   * Foto untuk lingkaran di hero. Isinya berganti sendiri, satu foto
+   * tampil 4,5 detik lalu larut ke foto berikutnya.
+   *
+   * Menambah atau mengurangi foto cukup di daftar ini, temponya ikut
+   * menyesuaikan sendiri. Taruh berkasnya di folder `public/`.
+   * Kalau daftarnya dikosongkan, yang tampil tanda lensa dari logo.
+   *
+   * Supaya pergantiannya halus, semua foto sudah dipotong kotak dengan
+   * wajah pada ukuran dan posisi yang sama.
    */
-  potret: null as string | null,
-  potretAlt: "Foto Hengky",
+  potret: [
+    "/potret-1.jpg",
+    "/potret-2.jpg",
+    "/potret-3.jpg",
+    "/potret-4.jpg",
+    "/potret-5.jpg",
+  ] as string[],
+  potretAlt: "Hengky",
 
   profesi: [
     {
@@ -73,7 +84,10 @@ export const profil = {
       "Email paling cepat dibalas. Untuk kelas privat, sebutkan alat musik dan level murid supaya saya bisa langsung jawab jadwalnya.",
     // Ganti dengan alamat email dan nomor yang mau kamu pakai secara publik.
     email: "hengkypianister@gmail.com",
-    whatsapp: { tampil: "", url: "" }, // contoh: { tampil: "0812 3456 7890", url: "https://wa.me/628123456789" }
+    whatsapp: {
+      tampil: "0818 0827 4941",
+      url: "https://wa.me/6281808274941",
+    },
   },
 } as const;
 
