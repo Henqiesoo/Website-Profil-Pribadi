@@ -62,6 +62,43 @@ export const profil = {
   ],
 
   /**
+   * Foto mengajar dan berkhotbah. Ini bukti kerja, bukan hiasan, jadi
+   * tata letaknya sengaja lurus dan diam, beda dari kolase "Sehari-hari"
+   * yang miring dan hanyut.
+   */
+  mengajar: {
+    judul: "Mengajar",
+    catatan:
+      "Komsel, mimbar, dan ruang kelas. Bagian pekerjaan yang paling sering, dan paling jarang sempat difoto.",
+    utama: {
+      src: "/ajar-komsel-lebar.jpg",
+      w: 1500,
+      h: 675,
+      alt: "Hengky mengajar komsel di depan papan tulis, di ruang keluarga",
+    },
+    lain: [
+      {
+        src: "/ajar-mimbar-dekat.jpg",
+        w: 760,
+        h: 950,
+        alt: "Hengky berkhotbah memegang mikrofon, dengan papan tulis berisi catatan",
+      },
+      {
+        src: "/ajar-mimbar-penuh.jpg",
+        w: 760,
+        h: 950,
+        alt: "Hengky berdiri di belakang mimbar kayu",
+      },
+      {
+        src: "/ajar-mimbar-jemaat.jpg",
+        w: 760,
+        h: 950,
+        alt: "Hengky berkhotbah di hadapan jemaat",
+      },
+    ],
+  },
+
+  /**
    * Jasa yang dibuka. Harga dan tempo diambil dari brosur HENQIESOO.
    * Nomor WA di sini nomor usaha, beda dari nomor pribadi di `kontak`.
    */

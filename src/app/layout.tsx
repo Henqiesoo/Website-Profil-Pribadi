@@ -16,7 +16,16 @@ const archivo = Archivo({
 const deskripsi =
   "Hengky (Henqiesoo). Guru SMK, kandidat dosen teologi, guru musik privat, dan pencerita kisah nyata.";
 
+/** Dipakai untuk menyusun URL mutlak pada kartu pratinjau. Di Vercel
+ *  diisi otomatis; saat dijalankan lokal jatuh ke localhost. */
+const asal =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "http://localhost:3000");
+
 export const metadata: Metadata = {
+  metadataBase: new URL(asal),
   title: `${profil.nama} (${profil.brand})`,
   description: deskripsi,
   openGraph: {

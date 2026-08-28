@@ -5,6 +5,7 @@ import { Galeri } from "@/components/Galeri";
 import { Hero } from "@/components/Hero";
 import { Jasa } from "@/components/Jasa";
 import { Kontak } from "@/components/Kontak";
+import { Mengajar } from "@/components/Mengajar";
 import { Nav } from "@/components/Nav";
 import { Profesi } from "@/components/Profesi";
 import { Sorot } from "@/components/Sorot";
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <Sorot />
         <Profesi />
+        <Mengajar />
         <Jasa />
         <Cerita />
         <Galeri />

@@ -29,18 +29,22 @@ Ubah file itu saja, tidak perlu menyentuh file lain. Yang perlu diisi:
    masing-masing punya `tampil` (teks yang terlihat) dan `url`. Untuk WhatsApp
    pakai format `https://wa.me/628...`. Baris yang `url`-nya dikosongkan tidak
    ditampilkan.
-3. **Jasa.** `jasa` berisi paket, harga, tempo, dan isi tiap paket, ditambah
+3. **Mengajar.** `mengajar` berisi satu foto utama lebar dan tiga foto
+   pendamping. Tata letaknya sengaja lurus dan diam, beda dari kolase
+   "Sehari-hari" yang miring dan hanyut, karena ini bukti kerja bukan hiasan.
+
+4. **Jasa.** `jasa` berisi paket, harga, tempo, dan isi tiap paket, ditambah
    blok kelas privat dan tiga janji kerja. Nomor WA di bagian ini nomor usaha,
    sengaja dipisah dari nomor pribadi di `kontak`.
 
-4. **Pita berjalan.** `sorot` berisi daftar kata yang lewat di bawah hero.
+5. **Pita berjalan.** `sorot` berisi daftar kata yang lewat di bawah hero.
 
-5. **Kolase.** `galeri.foto` berisi kartu-kartunya. `lebar` itu lebar kartu di
+6. **Kolase.** `galeri.foto` berisi kartu-kartunya. `lebar` itu lebar kartu di
    layar lebar, `putar` kemiringannya, `turun` seberapa jauh kartu digeser ke
    bawah supaya barisnya tidak rata. `w` dan `h` harus sama dengan ukuran asli
    berkasnya, dipakai untuk mencegah pergeseran tata letak saat gambar dimuat.
 
-6. **Foto potret.** `potret` berisi daftar foto yang tampil bergantian di
+7. **Foto potret.** `potret` berisi daftar foto yang tampil bergantian di
    lingkaran hero. Taruh berkasnya di `public/`, lalu tulis path-nya di daftar
    itu. Menambah atau mengurangi foto cukup di daftar ini; tempo pergantiannya
    ikut menyesuaikan sendiri, tidak perlu menyentuh CSS. Kalau daftarnya
@@ -49,6 +53,13 @@ Ubah file itu saja, tidak perlu menyentuh file lain. Yang perlu diisi:
    Supaya pergantiannya tidak terasa melompat, tiap foto perlu dipotong kotak
    dengan wajah pada ukuran dan posisi yang kira-kira sama. Foto yang ada
    sekarang sudah disiapkan begitu.
+
+## Kartu pratinjau
+
+`src/app/opengraph-image.jpg` adalah gambar yang muncul waktu link dibagikan
+di WhatsApp atau media sosial. Ukurannya 1200x630. `metadataBase` di
+`layout.tsx` diambil dari `VERCEL_PROJECT_PRODUCTION_URL` waktu di-deploy,
+atau dari `NEXT_PUBLIC_SITE_URL` kalau mau dipaksa ke domain sendiri.
 
 ## Berkas logo
 
