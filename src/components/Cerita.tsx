@@ -1,5 +1,6 @@
 import {
   ArrowUpRightIcon,
+  FacebookLogoIcon,
   InstagramLogoIcon,
   TiktokLogoIcon,
   YoutubeLogoIcon,
@@ -12,6 +13,7 @@ const ikon = {
   YouTube: YoutubeLogoIcon,
   TikTok: TiktokLogoIcon,
   Instagram: InstagramLogoIcon,
+  Facebook: FacebookLogoIcon,
 } as const;
 
 export function Cerita() {

@@ -72,9 +72,19 @@ export const profil = {
      * Kanal dengan url kosong ("") tidak akan ditampilkan.
      */
     kanal: [
-      { nama: "YouTube", handle: "@henqiesoo", url: "" },
+      {
+        nama: "YouTube",
+        handle: "@ceritaduniabyme",
+        url: "https://www.youtube.com/@ceritaduniabyme",
+      },
+      {
+        nama: "Instagram",
+        handle: "@henqiesoo",
+        url: "https://www.instagram.com/henqiesoo",
+      },
+      // Belum ada. Isi `url`-nya kalau nanti sudah ada, barisnya muncul sendiri.
+      // Nama yang sudah ada ikonnya: YouTube, Instagram, TikTok, Facebook.
       { nama: "TikTok", handle: "@henqiesoo", url: "" },
-      { nama: "Instagram", handle: "@henqiesoo", url: "" },
     ],
   },
 
