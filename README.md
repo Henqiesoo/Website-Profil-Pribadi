@@ -57,9 +57,11 @@ Arahnya jendela bidik, diambil dari bingkai REC di logo sendiri.
   berulang, supaya ketidaksejajarannya terbaca sebagai irama, bukan kecelakaan.
 - Judul dibuat jauh lebih besar dari body, sekitar 10:1 di desktop. Huruf
   tampilan Archivo (sumbu lebar dipakai), huruf isi Geist.
-- Satu momen bergerak yang disengaja: potret bulat berputar 360 derajat tiap
-  20 detik. Titik REC yang mengorbit dipasang supaya putarannya kelihatan;
-  cakram yang simetris sempurna akan terlihat diam walau sedang berputar.
+- Satu momen bergerak yang disengaja: cincin bezel di sekeliling potret bulat
+  berputar 360 derajat tiap 20 detik, sementara isinya diam. Foto wajah jadi
+  tidak pernah terbalik. Titik REC menumpang di cincin itu supaya putarannya
+  kelihatan; cincin bundar yang simetris sempurna akan terlihat diam walau
+  sedang berputar.
 - Mode terang dan gelap mengikuti setelan sistem, keduanya lolos kontras
   WCAG AA pada semua teks yang diperiksa.
 - Semua animasi mati kalau pengunjung mengaktifkan `prefers-reduced-motion`.
