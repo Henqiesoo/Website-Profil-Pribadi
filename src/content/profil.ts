@@ -103,6 +103,11 @@ export const profil = {
       tampil: "0818 0827 4941",
       url: "https://wa.me/6281808274941",
     },
+    // Toko. Dikosongkan `url`-nya kalau tidak mau ditampilkan.
+    toko: {
+      tampil: "Toko Shopee",
+      url: "https://id.shp.ee/1rdjfc1y?smtt=0.0.9",
+    },
   },
 } as const;
 

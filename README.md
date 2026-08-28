@@ -25,9 +25,10 @@ Ubah file itu saja, tidak perlu menyentuh file lain. Yang perlu diisi:
 1. **Link kanal konten.** Di bagian `cerita.kanal`, isi `url` masing-masing kanal.
    Kanal yang `url`-nya masih kosong tidak ditampilkan, dan kalau semuanya kosong
    halaman menampilkan catatan singkat sebagai gantinya.
-2. **Email dan WhatsApp.** Di bagian `kontak`. Untuk WhatsApp, isi `tampil`
-   (nomor yang terlihat) dan `url` (format `https://wa.me/628...`). Kalau `url`
-   dikosongkan, baris WhatsApp tidak muncul.
+2. **Kontak.** Di bagian `kontak`: `email`, lalu `whatsapp` dan `toko` yang
+   masing-masing punya `tampil` (teks yang terlihat) dan `url`. Untuk WhatsApp
+   pakai format `https://wa.me/628...`. Baris yang `url`-nya dikosongkan tidak
+   ditampilkan.
 3. **Foto potret.** `potret` berisi daftar foto yang tampil bergantian di
    lingkaran hero. Taruh berkasnya di `public/`, lalu tulis path-nya di daftar
    itu. Menambah atau mengurangi foto cukup di daftar ini; tempo pergantiannya

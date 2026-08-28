@@ -1,4 +1,4 @@
-import { WhatsappLogoIcon } from "@phosphor-icons/react/dist/ssr";
+import { StorefrontIcon, WhatsappLogoIcon } from "@phosphor-icons/react/dist/ssr";
 
 import { profil } from "@/content/profil";
 import { Reveal } from "./Reveal";
@@ -6,6 +6,22 @@ import { TautanTeks } from "./Tautan";
 
 export function Kontak() {
   const { kontak } = profil;
+
+  // Baris yang `url`-nya kosong tidak ikut ditampilkan.
+  const tautan = [
+    {
+      kunci: "whatsapp",
+      Ikon: WhatsappLogoIcon,
+      label: `WhatsApp ${kontak.whatsapp.tampil}`,
+      href: kontak.whatsapp.url,
+    },
+    {
+      kunci: "toko",
+      Ikon: StorefrontIcon,
+      label: kontak.toko.tampil,
+      href: kontak.toko.url,
+    },
+  ].filter((t) => t.href.length > 0);
 
   return (
     <section
@@ -37,18 +53,24 @@ export function Kontak() {
             {kontak.catatan}
           </p>
 
-          {kontak.whatsapp.url ? (
-            <TautanTeks
-              href={kontak.whatsapp.url}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="shrink-0 text-[0.9375rem] whitespace-nowrap"
-            >
-              <span className="inline-flex items-center gap-2">
-                <WhatsappLogoIcon size={20} weight="regular" aria-hidden />
-                WhatsApp {kontak.whatsapp.tampil}
-              </span>
-            </TautanTeks>
+          {tautan.length > 0 ? (
+            <ul className="flex shrink-0 flex-col items-start gap-3">
+              {tautan.map(({ kunci, Ikon, label, href }) => (
+                <li key={kunci}>
+                  <TautanTeks
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="text-[0.9375rem] whitespace-nowrap"
+                  >
+                    <span className="inline-flex items-center gap-2">
+                      <Ikon size={20} weight="regular" aria-hidden />
+                      {label}
+                    </span>
+                  </TautanTeks>
+                </li>
+              ))}
+            </ul>
           ) : null}
         </div>
       </Reveal>
