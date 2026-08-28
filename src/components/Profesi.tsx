@@ -8,7 +8,7 @@ export function Profesi() {
   return (
     <section
       id="profesi"
-      className="mx-auto max-w-[var(--shell)] px-6 pb-24 md:px-10 md:pb-40"
+      className="mx-auto max-w-[var(--shell)] px-6 pt-24 pb-24 md:px-10 md:pt-36 md:pb-40"
     >
       <Reveal>
         <h2 className="d-1 max-w-[14ch]">Yang saya kerjakan</h2>

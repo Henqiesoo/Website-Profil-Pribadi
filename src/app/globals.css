@@ -89,6 +89,10 @@ html {
 }
 
 body {
+  /* Lingkaran potret sengaja meluber lewat tepi kanan. `clip` memotongnya
+     di batas layar tanpa membuat body jadi wadah gulir, jadi nav yang
+     sticky tetap menempel. `hidden` akan merusak itu. */
+  overflow-x: clip;
   background-color: var(--ground);
   color: var(--ink-body);
   font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
@@ -256,12 +260,109 @@ body {
   transform: translateY(0);
 }
 
+/* Pita berjalan --------------------------------------------------- */
+
+@keyframes geser {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.pita {
+  animation: geser 46s linear infinite;
+}
+
+/* Kolase ------------------------------------------------------------
+   Dua lapisan terpisah supaya keduanya bisa memakai transform sekaligus:
+   pembungkus luar untuk parallax gulir, kartu di dalamnya untuk hanyut
+   yang jalan terus. Kalau ditumpuk di satu elemen, yang satu menimpa
+   yang lain.
+   ------------------------------------------------------------------- */
+
+@keyframes hanyut {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--putar));
+  }
+  50% {
+    transform: translateY(-13px) rotate(calc(var(--putar) + 1.1deg));
+  }
+}
+
+/* Lebar dipasang di .lapis, karena itu yang jadi anak flex. Kalau
+   ditaruh di .kartu, persennya mengacu pada kotak yang lebarnya justru
+   ditentukan oleh .kartu itu sendiri. */
+.lapis {
+  width: 44%;
+}
+
+@media (min-width: 768px) {
+  .lapis {
+    width: var(--lebar);
+  }
+}
+
+.kartu {
+  display: block;
+  animation: hanyut var(--tempo) ease-in-out infinite;
+  animation-delay: var(--jeda);
+  transform: rotate(var(--putar));
+}
+
+@keyframes melayang {
+  from {
+    transform: translateY(var(--jauh));
+  }
+  to {
+    transform: translateY(calc(var(--jauh) * -1));
+  }
+}
+
+/* Animasi bertimeline gulir belum ada di semua browser. Tanpa @supports,
+   `fill: both` akan langsung memasang keadaan akhir dan kartunya melompat. */
+@supports (animation-timeline: view()) {
+  .lapis {
+    animation: melayang linear both;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+  }
+}
+
+@keyframes mengecil {
+  to {
+    transform: scale(0.84) translateY(-2%);
+    opacity: 0.55;
+  }
+}
+
+@supports (animation-timeline: scroll()) {
+  .zoom-keluar {
+    transform-origin: left center;
+    animation: mengecil linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 75vh;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
   .putar {
     animation: none;
+  }
+  .pita,
+  .kartu,
+  .lapis,
+  .zoom-keluar {
+    animation: none;
+    transform: none;
+  }
+  .kartu {
+    transform: rotate(var(--putar));
   }
   .salindia {
     animation: none;

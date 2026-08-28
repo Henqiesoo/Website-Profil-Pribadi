@@ -61,6 +61,39 @@ export const profil = {
     },
   ],
 
+  /** Pita berjalan di bawah hero. Isinya apa yang benar-benar dia ajarkan. */
+  sorot: [
+    "PJOK",
+    "SENI MUSIK",
+    "PENDIDIKAN AGAMA KRISTEN",
+    "PRAKARYA & KEWIRAUSAHAAN",
+    "PIANO",
+    "GITAR",
+    "TEOLOGI",
+    "KISAH NYATA",
+  ],
+
+  /**
+   * Kolase foto. `lebar` itu lebar kartu di layar lebar (persen dari
+   * kolomnya), `putar` kemiringannya, `turun` seberapa jauh kartu itu
+   * digeser ke bawah supaya barisnya tidak rata. Di layar kecil semua
+   * kartu memakai lebar yang sama.
+   */
+  galeri: {
+    judul: "Sehari-hari",
+    catatan:
+      "Di luar kelas dan kamera. Foto lama, sebagian besar diambil sendiri.",
+    foto: [
+      { src: "/galeri-1.jpg", w: 464, h: 620, alt: "Hengky di depan papan nama Gereja Berea Sungrak Indonesia", lebar: "21%", putar: "-5deg", turun: "0rem" },
+      { src: "/galeri-2.jpg", w: 620, h: 414, alt: "Hengky di atas perahu kayu", lebar: "30%", putar: "3deg", turun: "3rem" },
+      { src: "/galeri-3.jpg", w: 497, h: 620, alt: "Hengky di tepi laut", lebar: "19%", putar: "-2.5deg", turun: "-1.5rem" },
+      { src: "/galeri-4.jpg", w: 620, h: 620, alt: "Hengky memberi makan seekor burung", lebar: "24%", putar: "4.5deg", turun: "4rem" },
+      { src: "/galeri-5.jpg", w: 465, h: 620, alt: "Hengky berdiri di dermaga", lebar: "17%", putar: "-6deg", turun: "-2rem" },
+      { src: "/galeri-6.jpg", w: 620, h: 620, alt: "Hengky di dalam ruangan", lebar: "22%", putar: "2deg", turun: "2.5rem" },
+      { src: "/galeri-7.jpg", w: 496, h: 620, alt: "Hengky mengenakan hoodie kuning", lebar: "20%", putar: "-3.5deg", turun: "-1rem" },
+    ],
+  },
+
   cerita: {
     judul: "HENQIESOO Storytelling",
     paragraf: [

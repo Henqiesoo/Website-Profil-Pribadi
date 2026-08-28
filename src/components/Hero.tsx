@@ -21,9 +21,14 @@ export function Hero() {
       </div>
 
       <div className="relative">
-        <h1 className="rise d-hero uppercase" style={{ animationDelay: "60ms" }}>
-          {hero.baris1}
-        </h1>
+        {/* Dua lapisan: yang luar mengecil mengikuti gulir, yang dalam
+            memainkan animasi masuk. Ditumpuk di satu elemen, keduanya
+            sama-sama memakai properti `animation` dan saling menghapus. */}
+        <div className="zoom-keluar">
+          <h1 className="rise d-hero uppercase" style={{ animationDelay: "60ms" }}>
+            {hero.baris1}
+          </h1>
+        </div>
 
         <p
           className="rise d-1 mt-4 text-ink-muted"

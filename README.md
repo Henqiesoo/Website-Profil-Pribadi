@@ -29,7 +29,14 @@ Ubah file itu saja, tidak perlu menyentuh file lain. Yang perlu diisi:
    masing-masing punya `tampil` (teks yang terlihat) dan `url`. Untuk WhatsApp
    pakai format `https://wa.me/628...`. Baris yang `url`-nya dikosongkan tidak
    ditampilkan.
-3. **Foto potret.** `potret` berisi daftar foto yang tampil bergantian di
+3. **Pita berjalan.** `sorot` berisi daftar kata yang lewat di bawah hero.
+
+4. **Kolase.** `galeri.foto` berisi kartu-kartunya. `lebar` itu lebar kartu di
+   layar lebar, `putar` kemiringannya, `turun` seberapa jauh kartu digeser ke
+   bawah supaya barisnya tidak rata. `w` dan `h` harus sama dengan ukuran asli
+   berkasnya, dipakai untuk mencegah pergeseran tata letak saat gambar dimuat.
+
+5. **Foto potret.** `potret` berisi daftar foto yang tampil bergantian di
    lingkaran hero. Taruh berkasnya di `public/`, lalu tulis path-nya di daftar
    itu. Menambah atau mengurangi foto cukup di daftar ini; tempo pergantiannya
    ikut menyesuaikan sendiri, tidak perlu menyentuh CSS. Kalau daftarnya
@@ -64,7 +71,17 @@ Arahnya jendela bidik, diambil dari bingkai REC di logo sendiri.
   berulang, supaya ketidaksejajarannya terbaca sebagai irama, bukan kecelakaan.
 - Judul dibuat jauh lebih besar dari body, sekitar 10:1 di desktop. Huruf
   tampilan Archivo (sumbu lebar dipakai), huruf isi Geist.
-- Gerakan dipusatkan di satu tempat, yaitu lingkaran potret:
+- Gerakan yang ada semuanya satu gagasan: halaman ini berlaku seperti kamera.
+  Zoom, panning, parallax, dan lembar kontak foto. Bukan kumpulan efek lepas.
+- Pita berjalan di bawah hero, berisi mata pelajaran dan bidang yang diajarkan.
+- Nama di hero mengecil mengikuti gulir, seperti lensa yang menarik fokus.
+- Kolase "Sehari-hari" hanyut pelan dengan tempo berbeda-beda tiap kartu, dan
+  bergeser mengikuti gulir pada kecepatan berbeda supaya terasa berlapis.
+  Tempo hanyutnya tidak berkelipatan, jadi kartunya tidak pernah kembali
+  serentak dan gerakannya terbaca acak.
+- Gerak berbasis gulir dibungkus `@supports`. Browser yang belum mendukung
+  `animation-timeline` menampilkan halaman diam, bukan halaman rusak.
+- Gerakan di lingkaran potret:
   - Cincin bezel di sekelilingnya berputar 360 derajat tiap 20 detik,
     sementara isinya diam, jadi wajah tidak pernah terbalik. Titik REC
     menumpang di cincin itu supaya putarannya kelihatan; cincin bundar yang
