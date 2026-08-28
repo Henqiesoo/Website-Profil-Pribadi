@@ -38,6 +38,10 @@
   --nudge-2: clamp(1.5rem, 4.5vw, 6rem);
   --nudge-3: clamp(2.25rem, 7vw, 9.5rem);
 
+  /* Kartu kolase. Hitam mentah tidak terbaca di atas latar gelap,
+     jadi tiap mode punya nilainya sendiri. */
+  --bayang-kartu: 0 18px 40px -24px rgba(0, 0, 0, 0.55);
+
   --radius: 3px;
   --shell: 82rem;
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
@@ -57,6 +61,7 @@
     --on-accent: #12161a;
     --lens: #38434f;
     --lens-ring: rgba(237, 240, 243, 0.45);
+    --bayang-kartu: 0 20px 44px -22px rgba(0, 0, 0, 0.9);
   }
 }
 
@@ -81,6 +86,7 @@
   --font-sans: var(--font-geist-sans);
   --font-display: var(--font-archivo);
   --radius-brand: var(--radius);
+  --shadow-kartu: var(--bayang-kartu);
 }
 
 html {

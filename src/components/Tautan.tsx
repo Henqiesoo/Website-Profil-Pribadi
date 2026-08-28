@@ -27,14 +27,16 @@ export function TautanTeks({
 }: ComponentPropsWithoutRef<"a">) {
   return (
     <a
-      className={`group relative inline-block text-ink transition-colors duration-200 [transition-timing-function:var(--ease-out)] hover:text-accent ${className}`}
+      className={`group inline-flex min-h-11 items-center text-ink transition-colors duration-200 [transition-timing-function:var(--ease-out)] hover:text-accent ${className}`}
       {...props}
     >
-      {children}
-      <span
-        aria-hidden
-        className="absolute -bottom-0.5 left-0 h-px w-full origin-left scale-x-0 bg-accent transition-transform duration-300 [transition-timing-function:var(--ease-out)] group-hover:scale-x-100"
-      />
+      <span className="relative inline-block">
+        {children}
+        <span
+          aria-hidden
+          className="absolute -bottom-0.5 left-0 h-px w-full origin-left scale-x-0 bg-accent transition-transform duration-300 [transition-timing-function:var(--ease-out)] group-hover:scale-x-100"
+        />
+      </span>
     </a>
   );
 }

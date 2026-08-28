@@ -41,7 +41,7 @@ export function Musik() {
             }
           >
             <figure
-              className="kartu overflow-hidden rounded-brand border border-line bg-ground-sunk shadow-[0_18px_40px_-24px_rgba(0,0,0,0.55)]"
+              className="kartu overflow-hidden rounded-brand border border-line bg-ground-sunk shadow-kartu"
               style={
                 {
                   "--putar": f.putar,

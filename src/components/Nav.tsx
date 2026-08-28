@@ -26,7 +26,7 @@ export function Nav() {
               <li key={t.href}>
                 <a
                   href={t.href}
-                  className="meta transition-colors duration-200 [transition-timing-function:var(--ease-out)] hover:text-accent"
+                  className="meta inline-flex min-h-11 items-center transition-colors duration-200 [transition-timing-function:var(--ease-out)] hover:text-accent"
                 >
                   {t.label}
                 </a>
