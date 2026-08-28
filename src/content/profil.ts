@@ -82,9 +82,14 @@ export const profil = {
         handle: "@henqiesoo",
         url: "https://www.instagram.com/henqiesoo",
       },
-      // Belum ada. Isi `url`-nya kalau nanti sudah ada, barisnya muncul sendiri.
-      // Nama yang sudah ada ikonnya: YouTube, Instagram, TikTok, Facebook.
-      { nama: "TikTok", handle: "@henqiesoo", url: "" },
+      {
+        nama: "TikTok",
+        handle: "@sohen322",
+        url: "https://www.tiktok.com/@sohen322",
+      },
+      // Menambah kanal: tulis satu baris lagi di sini. Kanal dengan `url`
+      // kosong tidak ditampilkan. Nama yang sudah ada ikonnya:
+      // YouTube, Instagram, TikTok, Facebook.
     ],
   },
 
