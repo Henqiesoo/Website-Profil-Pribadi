@@ -187,8 +187,8 @@ export const profil = {
     catatan:
       "Mengiringi di gereja, main di panggung, dan latihan di rumah. Sebagian foto sudah lama.",
     foto: [
-      { src: "/musik-grand-cermin.jpg", w: 660, h: 495, alt: "Hengky bermain grand piano, bayangannya terpantul di tutup piano", lebar: "28%", putar: "-4deg", turun: "0rem" },
-      { src: "/musik-grand-topeng.jpg", w: 495, h: 660, alt: "Hengky bermain piano", lebar: "19%", putar: "3deg", turun: "3rem" },
+      { src: "/musik-grand-senyum.jpg", w: 660, h: 495, alt: "Hengky duduk di depan grand piano", lebar: "28%", putar: "-4deg", turun: "0rem" },
+      { src: "/musik-tangan-angkat.jpg", w: 495, h: 660, alt: "Hengky mengangkat kedua tangan di belakang keyboard", lebar: "19%", putar: "3deg", turun: "3rem" },
       { src: "/musik-panggung-topi.jpg", w: 495, h: 660, alt: "Hengky di belakang keyboard, dengan set drum di belakangnya", lebar: "21%", putar: "-2.5deg", turun: "-1.5rem" },
       { src: "/musik-latihan-hoodie.jpg", w: 660, h: 495, alt: "Hengky berlatih piano di rumah", lebar: "25%", putar: "4.5deg", turun: "4rem" },
       { src: "/musik-ibadah-band.jpg", w: 626, h: 417, alt: "Hengky mengiringi di grand piano bersama tim musik gereja", lebar: "27%", putar: "-6deg", turun: "-2rem" },
