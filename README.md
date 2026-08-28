@@ -30,15 +30,39 @@ Ubah file itu saja, tidak perlu menyentuh file lain. Yang perlu diisi:
    dikosongkan, baris WhatsApp tidak muncul.
 3. **Foto potret.** Taruh file foto di folder `public/`, lalu isi `potret`
    dengan path-nya, misalnya `"/potret.jpg"`. Selama masih `null`, yang tampil
-   adalah blok monogram huruf H.
+   di lingkaran itu adalah tanda lensa dari logo.
+
+## Berkas logo
+
+| Berkas | Dipakai di |
+| --- | --- |
+| `public/logo-henqiesoo.png` | latar terang (tinta gelap asli) |
+| `public/logo-henqiesoo-terang.png` | latar gelap (tinta diterangkan, merah tetap) |
+| `src/app/icon.png` | favicon, dari tanda lensa di atas navy |
+
+Keduanya transparan. Komponen `Logo` memasang dua-duanya lalu memilih lewat
+media query warna, jadi tidak ada kedipan saat halaman dimuat. Untuk blok gelap
+`Storytelling`, versi terang dipakai paksa lewat `nada="terang"`.
+
+Tanda lensa juga ada sebagai vektor di `src/components/Lensa.tsx` supaya tetap
+tajam di ukuran besar.
 
 ## Catatan desain
 
-- Palet: kertas bone dengan tinta hijau hutan. Satu warna aksen saja.
-- Mode terang dan gelap mengikuti setelan sistem pengunjung, keduanya sudah dicek.
-- Radius sudut 4px dipakai konsisten di semua elemen.
-- Animasi dibatasi pada masuknya konten saat di-scroll dan umpan balik tombol,
-  dan mati sepenuhnya kalau pengunjung mengaktifkan `prefers-reduced-motion`.
+Arahnya jendela bidik, diambil dari bingkai REC di logo sendiri.
+
+- Warna diambil dari logo: navy bingkai, arang wordmark, merah tanda lensa.
+  Satu warna aksen saja.
+- Tepi kiri sengaja bertangga. Nilainya cuma tiga (`--nudge-1/2/3`) dan dipakai
+  berulang, supaya ketidaksejajarannya terbaca sebagai irama, bukan kecelakaan.
+- Judul dibuat jauh lebih besar dari body, sekitar 10:1 di desktop. Huruf
+  tampilan Archivo (sumbu lebar dipakai), huruf isi Geist.
+- Satu momen bergerak yang disengaja: potret bulat berputar 360 derajat tiap
+  20 detik. Titik REC yang mengorbit dipasang supaya putarannya kelihatan;
+  cakram yang simetris sempurna akan terlihat diam walau sedang berputar.
+- Mode terang dan gelap mengikuti setelan sistem, keduanya lolos kontras
+  WCAG AA pada semua teks yang diperiksa.
+- Semua animasi mati kalau pengunjung mengaktifkan `prefers-reduced-motion`.
 
 ## Deploy
 

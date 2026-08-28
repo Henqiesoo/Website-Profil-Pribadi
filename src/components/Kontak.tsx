@@ -1,4 +1,4 @@
-import { EnvelopeSimpleIcon, WhatsappLogoIcon } from "@phosphor-icons/react/dist/ssr";
+import { WhatsappLogoIcon } from "@phosphor-icons/react/dist/ssr";
 
 import { profil } from "@/content/profil";
 import { Reveal } from "./Reveal";
@@ -10,32 +10,30 @@ export function Kontak() {
   return (
     <section
       id="kontak"
-      className="mx-auto max-w-[var(--shell)] px-6 py-24 md:px-10 md:py-32"
+      className="mx-auto max-w-[var(--shell)] px-6 py-24 md:px-10 md:py-40"
     >
       <Reveal>
-        <h2 className="display-md max-w-[22ch]">{kontak.judul}</h2>
+        <h2 className="d-1 max-w-[18ch]">{kontak.judul}</h2>
       </Reveal>
 
-      <Reveal delay={80}>
+      {/* Alamat surel didorong jauh ke kanan; ruang kosong di kirinya
+          yang membuat baris ini terbaca lebih dulu daripada ukurannya saja. */}
+      <Reveal delay={90} className="md:[margin-left:var(--nudge-3)]">
         <a
           href={`mailto:${kontak.email}`}
-          className="group mt-12 flex items-baseline gap-4 text-ink transition-colors duration-200 [transition-timing-function:var(--ease-out)] hover:text-accent md:mt-16"
+          className="group mt-14 inline-block max-w-full text-ink transition-colors duration-200 [transition-timing-function:var(--ease-out)] hover:text-accent md:mt-20"
         >
-          <EnvelopeSimpleIcon
-            size={28}
-            weight="regular"
+          <span className="d-email break-words">{kontak.email}</span>
+          <span
             aria-hidden
-            className="hidden shrink-0 translate-y-1 text-ink-muted transition-colors duration-200 [transition-timing-function:var(--ease-out)] group-hover:text-accent sm:block"
+            className="mt-4 block h-px w-full origin-left scale-x-100 bg-line-strong transition-[transform,background-color] duration-500 [transition-timing-function:var(--ease-out)] group-hover:bg-accent"
           />
-          <span className="text-[clamp(1.375rem,4.4vw,2.5rem)] leading-[1.15] font-medium tracking-[-0.035em] break-all">
-            {kontak.email}
-          </span>
         </a>
       </Reveal>
 
-      <Reveal delay={140}>
-        <div className="mt-10 flex flex-col gap-6 border-t border-line pt-8 md:flex-row md:items-start md:justify-between md:gap-16">
-          <p className="max-w-[52ch] text-[0.9375rem] leading-relaxed text-ink-muted">
+      <Reveal delay={150}>
+        <div className="mt-12 flex flex-col gap-6 md:flex-row md:items-start md:justify-between md:gap-16">
+          <p className="max-w-[48ch] text-[0.9375rem] leading-relaxed text-ink-muted">
             {kontak.catatan}
           </p>
 

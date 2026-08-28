@@ -1,3 +1,4 @@
+import { Bingkai } from "@/components/Bingkai";
 import { Cerita } from "@/components/Cerita";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
@@ -8,6 +9,7 @@ import { Profesi } from "@/components/Profesi";
 export default function Home() {
   return (
     <>
+      <Bingkai />
       <Nav />
       <main>
         <Hero />
