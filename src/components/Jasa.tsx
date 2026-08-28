@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { WhatsappLogoIcon } from "@phosphor-icons/react/dist/ssr";
 
 import { profil } from "@/content/profil";
@@ -42,9 +43,49 @@ export function Jasa() {
         ))}
       </div>
 
+      {/* Bukti kerja ditaruh tepat setelah harga: harga dulu, lalu buktinya.
+          Barisnya berselang-seling supaya tidak terbaca seperti tabel. */}
+      <div className="mt-20 md:mt-28">
+        <Reveal>
+          <h3 className="d-2" style={{ marginLeft: "var(--nudge-1)" }}>
+            {jasa.portofolio.judul}
+          </h3>
+        </Reveal>
+
+        {jasa.portofolio.proyek.map((p, i) => (
+          <Reveal key={p.src} delay={i * 90}>
+            <article className="mt-10 grid items-center gap-6 border-t border-line pt-10 md:mt-14 md:grid-cols-12 md:gap-10 md:pt-14">
+              <figure
+                className={`overflow-hidden rounded-brand border border-line bg-ground-sunk md:col-span-7 ${
+                  i % 2 === 1 ? "md:order-2 md:col-start-6" : ""
+                }`}
+              >
+                <Image
+                  src={p.src}
+                  alt={p.alt}
+                  width={p.w}
+                  height={p.h}
+                  sizes="(min-width: 768px) 55vw, 100vw"
+                  className="h-auto w-full"
+                />
+              </figure>
+              <div
+                className={`md:col-span-4 ${
+                  i % 2 === 1 ? "md:order-1 md:col-start-1" : "md:col-start-9"
+                }`}
+              >
+                <h4 className="d-3">{p.nama}</h4>
+                <p className="meta mt-2">{p.jenis}</p>
+                <p className="prose-body mt-4 text-ink-body">{p.isi}</p>
+              </div>
+            </article>
+          </Reveal>
+        ))}
+      </div>
+
       <Reveal delay={160}>
         <div
-          className="mt-12 border-t border-line pt-8 md:mt-16"
+          className="mt-16 border-t border-line pt-8 md:mt-24"
           style={{ marginLeft: "var(--nudge-2)" }}
         >
           <h3 className="d-2">{jasa.kelas.nama}</h3>

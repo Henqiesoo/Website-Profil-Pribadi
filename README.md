@@ -34,8 +34,13 @@ Ubah file itu saja, tidak perlu menyentuh file lain. Yang perlu diisi:
    "Sehari-hari" yang miring dan hanyut, karena ini bukti kerja bukan hiasan.
 
 4. **Jasa.** `jasa` berisi paket, harga, tempo, dan isi tiap paket, ditambah
-   blok kelas privat dan tiga janji kerja. Nomor WA di bagian ini nomor usaha,
-   sengaja dipisah dari nomor pribadi di `kontak`.
+   `portofolio` (contoh kerja), blok kelas privat, dan tiga janji kerja. Nomor
+   WA di bagian ini nomor usaha, sengaja dipisah dari nomor pribadi di
+   `kontak`.
+
+   Untuk menambah contoh kerja, potong dulu tangkapan layarnya sampai bersih
+   dari status bar HP, taskbar, dan badge alat bantu. Yang boleh terlihat cuma
+   situsnya.
 
 5. **Pita berjalan.** `sorot` berisi daftar kata yang lewat di bawah hero.
 

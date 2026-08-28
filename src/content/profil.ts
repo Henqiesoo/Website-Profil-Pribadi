@@ -51,7 +51,7 @@ export const profil = {
       peran: "Guru musik privat",
       ringkas: "Piano dan gitar, kelas satu per satu.",
       detail:
-        "Materi disusun mengikuti murid, bukan sebaliknya. Terbuka untuk pemula yang belum pernah menyentuh alat musik sampai yang sudah main bertahun-tahun.",
+        "Main piano, gitar, dan saksofon; yang diajarkan piano dan gitar. Materi disusun mengikuti murid, bukan sebaliknya. Terbuka untuk pemula yang belum pernah menyentuh alat musik sampai yang sudah main bertahun-tahun.",
     },
     {
       peran: "Content creator",
@@ -125,6 +125,34 @@ export const profil = {
         ],
       },
     ],
+    /**
+     * Contoh kerja. Tangkapan layarnya sengaja dipotong bersih dari status
+     * bar, taskbar, dan badge alat bantu, supaya yang terlihat cuma situsnya.
+     */
+    portofolio: {
+      judul: "Pernah dikerjakan",
+      proyek: [
+        {
+          nama: "VL Craft Souvenir",
+          jenis: "Profil perusahaan",
+          isi: "Perajin tas dan dompet batik. Halaman profil, edukasi batik, dan katalog produk per kategori.",
+          src: "/kerja-vlcraft.jpg",
+          w: 1440,
+          h: 688,
+          alt: "Beranda website VL Craft Souvenir",
+        },
+        {
+          nama: "GBSI Cibinong",
+          jenis: "Website gereja",
+          isi: "Gereja Berea Sungrak Indonesia cabang Cibinong. Jadwal ibadah, acara, surat gembala, renungan, dan galeri.",
+          src: "/kerja-gbsi.jpg",
+          w: 1440,
+          h: 811,
+          alt: "Beranda website GBSI Cibinong",
+        },
+      ],
+    },
+
     kelas: {
       nama: "Kelas privat",
       isi: "Piano, gitar, dan cara memakai Claude AI. Satu per satu, materinya mengikuti murid.",
