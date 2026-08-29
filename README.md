@@ -87,7 +87,11 @@ tajam di ukuran besar.
 Arahnya jendela bidik, diambil dari bingkai REC di logo sendiri.
 
 - Warna diambil dari logo: navy bingkai, arang wordmark, merah tanda lensa.
-  Satu warna aksen saja.
+  Satu warna aksen saja, di atas kertas putih hangat.
+- Halaman ini sengaja satu nada: terang. Mode gelapnya dilepas karena
+  membuat halaman jadi bidang hitam yang datar, tanpa pemisah antar bagian.
+  `color-scheme: light` memberi tahu browser supaya permukaan bawaannya
+  ikut terang.
 - Tepi kiri sengaja bertangga. Nilainya cuma tiga (`--nudge-1/2/3`) dan dipakai
   berulang, supaya ketidaksejajarannya terbaca sebagai irama, bukan kecelakaan.
 - Judul dibuat jauh lebih besar dari body, sekitar 10:1 di desktop. Huruf
@@ -111,8 +115,7 @@ Arahnya jendela bidik, diambil dari bingkai REC di logo sendiri.
     foto berikutnya.
 - Foto orang lain, terutama murid yang masih di bawah umur, tidak dipasang
   tanpa izin tertulis dari orang tuanya.
-- Mode terang dan gelap mengikuti setelan sistem, keduanya lolos kontras
-  WCAG AA pada semua teks yang diperiksa.
+- Semua teks lolos kontras WCAG AA.
 - Semua animasi mati kalau pengunjung mengaktifkan `prefers-reduced-motion`.
 
 ## Deploy
