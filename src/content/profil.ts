@@ -9,7 +9,7 @@ export const profil = {
 
   hero: {
     baris1: "Hengky",
-    baris2: ["Guru.", "Musisi.", "Pencerita."],
+    baris2: ["Guru.", "Musisi.", "Pengajaran."],
     ringkasan:
       "Mengajar di dua SMK, membuka kelas musik privat, menyiapkan kelas teologi, dan menuliskan kisah nyata orang biasa.",
   },

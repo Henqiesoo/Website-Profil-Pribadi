@@ -14,7 +14,7 @@ const archivo = Archivo({
 });
 
 const deskripsi =
-  "Hengky (Henqiesoo). Guru SMK, kandidat dosen teologi, guru musik privat, dan pencerita kisah nyata.";
+  "Hengky (Henqiesoo). Guru SMK, kandidat dosen teologi, guru musik privat, dan pengajaran lewat kisah nyata.";
 
 /** Dipakai untuk menyusun URL mutlak pada kartu pratinjau. Di Vercel
  *  diisi otomatis; saat dijalankan lokal jatuh ke localhost. */
