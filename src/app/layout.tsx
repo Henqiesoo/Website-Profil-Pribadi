@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
-import { Archivo } from "next/font/google";
+import { Archivo, Source_Serif_4 } from "next/font/google";
 import { GeistSans } from "geist/font/sans";
 
 import { profil } from "@/content/profil";
 import "./globals.css";
 
-/** Huruf tampilan: grotesk yang bisa dilebarkan, dipakai besar-besar. */
+/** Huruf isi: serif teks. Dipakai untuk paragraf dan judul bagian, supaya
+ *  halaman terbaca seperti terbitan, bukan seperti dasbor aplikasi. */
+const serif = Source_Serif_4({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-serif",
+});
+
+/** Huruf tampilan: grotesk yang bisa dilebarkan. Sekarang tinggal dipakai
+ *  untuk nama besar di hero, nav, tombol, dan label kecil. */
 const archivo = Archivo({
   subsets: ["latin"],
   axes: ["wdth"],
@@ -40,7 +49,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="id" className={`${GeistSans.variable} ${archivo.variable}`}>
+    <html lang="id" className={`${GeistSans.variable} ${archivo.variable} ${serif.variable}`}>
       <body>
         {/* Tanpa JavaScript, isi halaman tetap terbaca penuh. */}
         <noscript>

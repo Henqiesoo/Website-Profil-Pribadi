@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import Image from "next/image";
 import { WhatsappLogoIcon } from "@phosphor-icons/react/dist/ssr";
 
@@ -11,7 +12,8 @@ export function Jasa() {
   return (
     <section
       id="jasa"
-      className="mx-auto max-w-[var(--shell)] px-6 pb-24 md:px-10 md:pb-40"
+      className="lapis-kertas mx-auto max-w-[var(--shell)] px-6 pt-24 pb-24 md:px-10 md:pt-32 md:pb-40"
+      style={{ "--lapis": "var(--ground-sunk)" } as CSSProperties}
     >
       <Reveal>
         <div style={{ marginLeft: "var(--nudge-1)" }}>
@@ -23,7 +25,7 @@ export function Jasa() {
       <div className="mt-14 grid gap-5 md:mt-20 md:grid-cols-2 md:gap-8">
         {jasa.paket.map((p, i) => (
           <Reveal key={p.nama} delay={i * 80} className="h-full">
-            <article className="flex h-full flex-col rounded-brand border border-line bg-ground-sunk p-7 md:p-9">
+            <article className="flex h-full flex-col rounded-brand border border-line bg-ground-warm p-7 md:p-9">
               <h3 className="d-2">{p.nama}</h3>
               <p className="d-2 mt-5 text-accent">{p.harga}</p>
               <p className="meta mt-3">{p.tempo}</p>

@@ -87,7 +87,15 @@ tajam di ukuran besar.
 Arahnya jendela bidik, diambil dari bingkai REC di logo sendiri.
 
 - Warna diambil dari logo: navy bingkai, arang wordmark, merah tanda lensa.
-  Satu warna aksen saja, di atas kertas putih hangat.
+  Satu warna aksen saja, di atas tangga kertas hangat.
+- Ketinggian dinyatakan lewat nada kertas, bukan bayangan. Tiga tingkat:
+  kanvas `--ground`, kartu `--ground-sunk` yang justru lebih terang, dan
+  manila `--ground-warm` untuk kartu yang ditonjolkan. Bagian halaman
+  bergantian antara kanvas dan kartu supaya ada irama tanpa garis pembatas.
+- Huruf dibagi dua tugas: serif teks untuk isi dan judul bagian, grotesk
+  untuk nama besar di hero, nav, tombol, dan label kecil.
+- Tombol terisi membulat hanya di sudut bawah. Itu tanda khas sistemnya,
+  bukan radius yang kelupaan.
 - Halaman ini sengaja satu nada: terang. Mode gelapnya dilepas karena
   membuat halaman jadi bidang hitam yang datar, tanpa pemisah antar bagian.
   `color-scheme: light` memberi tahu browser supaya permukaan bawaannya

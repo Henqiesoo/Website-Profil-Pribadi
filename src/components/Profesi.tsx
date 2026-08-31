@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { profil } from "@/content/profil";
 import { Reveal } from "./Reveal";
 
@@ -8,7 +9,8 @@ export function Profesi() {
   return (
     <section
       id="profesi"
-      className="mx-auto max-w-[var(--shell)] px-6 pt-24 pb-24 md:px-10 md:pt-36 md:pb-40"
+      className="lapis-kertas mx-auto max-w-[var(--shell)] px-6 pt-24 pb-24 md:px-10 md:pt-36 md:pb-40"
+      style={{ "--lapis": "var(--ground-sunk)" } as CSSProperties}
     >
       <Reveal>
         <h2 className="d-1 max-w-[14ch]">Yang saya kerjakan</h2>

@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { StorefrontIcon, WhatsappLogoIcon } from "@phosphor-icons/react/dist/ssr";
 
 import { profil } from "@/content/profil";
@@ -26,7 +27,8 @@ export function Kontak() {
   return (
     <section
       id="kontak"
-      className="mx-auto max-w-[var(--shell)] px-6 py-24 md:px-10 md:py-40"
+      className="lapis-kertas mx-auto max-w-[var(--shell)] px-6 py-24 md:px-10 md:py-40"
+      style={{ "--lapis": "var(--ground-sunk)" } as CSSProperties}
     >
       <Reveal>
         <h2 className="d-1 max-w-[18ch]">{kontak.judul}</h2>
