@@ -203,6 +203,25 @@ body {
   }
 }
 
+/* Bagian Jasa dikecualikan dari serif. Di sini yang dibaca harga, paket,
+   dan tenggat pengerjaan: register produk, bukan register terbitan. Judul
+   memakai grotesk tampilan supaya nyambung dengan nama besar di hero,
+   isinya memakai sans netral supaya daftar paketnya enak dipindai. */
+
+#jasa .d-1,
+#jasa .d-2,
+#jasa .d-3,
+#jasa h4 {
+  font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.03em;
+}
+
+#jasa,
+#jasa .prose-body,
+#jasa li {
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
 /* Pita permukaan. Sectionnya di tengah dan ada max-width, jadi latarnya
    direntangkan ke tepi layar lewat box-shadow lalu dipotong rapi. */
 

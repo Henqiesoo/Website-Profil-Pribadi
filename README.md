@@ -92,8 +92,11 @@ Arahnya jendela bidik, diambil dari bingkai REC di logo sendiri.
   kanvas `--ground`, kartu `--ground-sunk` yang justru lebih terang, dan
   manila `--ground-warm` untuk kartu yang ditonjolkan. Bagian halaman
   bergantian antara kanvas dan kartu supaya ada irama tanpa garis pembatas.
-- Huruf dibagi dua tugas: serif teks untuk isi dan judul bagian, grotesk
+- Huruf dibagi tiga tugas: serif teks untuk isi dan judul bagian, grotesk
   untuk nama besar di hero, nav, tombol, dan label kecil.
+- Bagian Jasa dikecualikan dari serif. Di situ yang dibaca harga, paket,
+  dan tenggat, jadi registernya produk bukan terbitan: judul memakai
+  grotesk tampilan, isinya sans netral supaya daftar paket enak dipindai.
 - Tombol terisi membulat hanya di sudut bawah. Itu tanda khas sistemnya,
   bukan radius yang kelupaan.
 - Halaman ini sengaja satu nada: terang. Mode gelapnya dilepas karena
