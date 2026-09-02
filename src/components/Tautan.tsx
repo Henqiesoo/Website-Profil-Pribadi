@@ -6,7 +6,7 @@ type ButtonProps = ComponentPropsWithoutRef<"a"> & {
 
 const dasar =
   "inline-flex h-12 items-center justify-center px-5 whitespace-nowrap sm:px-6 " +
-  "font-[family-name:var(--font-archivo)] text-[0.9375rem] font-semibold tracking-[0.02em] " +
+  "text-[0.9375rem] tracking-[-0.005em] " +
   "transition-[background-color,color,border-color,transform] duration-200 [transition-timing-function:var(--ease-out)] " +
   "active:scale-[0.98]";
 
