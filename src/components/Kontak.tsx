@@ -1,5 +1,8 @@
-import type { CSSProperties } from "react";
-import { StorefrontIcon, WhatsappLogoIcon } from "@phosphor-icons/react/dist/ssr";
+import {
+  EnvelopeSimpleIcon,
+  StorefrontIcon,
+  WhatsappLogoIcon,
+} from "@phosphor-icons/react/dist/ssr";
 
 import { profil } from "@/content/profil";
 import { Reveal } from "./Reveal";
@@ -8,43 +11,54 @@ import { TautanTeks } from "./Tautan";
 export function Kontak() {
   const { kontak } = profil;
 
-  // Baris yang `url`-nya kosong tidak ikut ditampilkan.
+  // WhatsApp yang paling cepat dibalas, jadi nomornya yang dibesarkan.
+  // Email dan toko turun jadi baris kecil di bawahnya.
   const tautan = [
     {
-      kunci: "whatsapp",
-      Ikon: WhatsappLogoIcon,
-      label: `WhatsApp ${kontak.whatsapp.tampil}`,
-      href: kontak.whatsapp.url,
+      kunci: "email",
+      Ikon: EnvelopeSimpleIcon,
+      label: kontak.email,
+      href: `mailto:${kontak.email}`,
+      keluar: false,
     },
     {
       kunci: "toko",
       Ikon: StorefrontIcon,
       label: kontak.toko.tampil,
       href: kontak.toko.url,
+      keluar: true,
     },
   ].filter((t) => t.href.length > 0);
 
   return (
     <section
       id="kontak"
-      className="lapis-kertas mx-auto max-w-[var(--shell)] px-6 py-24 md:px-10 md:py-40"
-      style={{ "--lapis": "var(--ground-sunk)" } as CSSProperties}
+      className="terang mx-auto max-w-[var(--shell)] px-6 py-24 md:px-10 md:py-36"
     >
       <Reveal>
-        <h2 className="d-1 max-w-[18ch]">{kontak.judul}</h2>
+        <span className="penanda">06 / 06</span>
+        <h2 className="d-1 mt-6 max-w-[18ch]">{kontak.judul}</h2>
       </Reveal>
 
-      {/* Alamat surel didorong jauh ke kanan; ruang kosong di kirinya
-          yang membuat baris ini terbaca lebih dulu daripada ukurannya saja. */}
+      {/* Nomornya didorong jauh ke kanan; ruang kosong di kirinya yang
+          membuat baris ini terbaca lebih dulu, bukan ukurannya saja. */}
       <Reveal delay={90} className="md:[margin-left:var(--nudge-3)]">
         <a
-          href={`mailto:${kontak.email}`}
+          href={kontak.whatsapp.url}
+          target="_blank"
+          rel="noreferrer noopener"
           className="group mt-14 inline-block max-w-full text-ink transition-colors duration-200 [transition-timing-function:var(--ease-out)] hover:text-accent md:mt-20"
         >
-          <span className="d-email break-words">{kontak.email}</span>
+          <span className="meta flex items-center gap-2 text-accent">
+            <WhatsappLogoIcon size={16} weight="regular" aria-hidden />
+            WhatsApp
+          </span>
+          <span className="d-email mt-3 block break-words">
+            {kontak.whatsapp.tampil}
+          </span>
           <span
             aria-hidden
-            className="mt-4 block h-px w-full origin-left scale-x-100 bg-line-strong transition-[transform,background-color] duration-500 [transition-timing-function:var(--ease-out)] group-hover:bg-accent"
+            className="mt-4 block h-px w-full origin-left bg-line-strong transition-colors duration-500 [transition-timing-function:var(--ease-out)] group-hover:bg-accent"
           />
         </a>
       </Reveal>
@@ -55,25 +69,24 @@ export function Kontak() {
             {kontak.catatan}
           </p>
 
-          {tautan.length > 0 ? (
-            <ul className="flex shrink-0 flex-col items-start gap-3">
-              {tautan.map(({ kunci, Ikon, label, href }) => (
-                <li key={kunci}>
-                  <TautanTeks
-                    href={href}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="text-[0.9375rem] whitespace-nowrap"
-                  >
-                    <span className="inline-flex items-center gap-2">
-                      <Ikon size={20} weight="regular" aria-hidden />
-                      {label}
-                    </span>
-                  </TautanTeks>
-                </li>
-              ))}
-            </ul>
-          ) : null}
+          <ul className="flex shrink-0 flex-col items-start gap-3">
+            {tautan.map(({ kunci, Ikon, label, href, keluar }) => (
+              <li key={kunci}>
+                <TautanTeks
+                  href={href}
+                  {...(keluar
+                    ? { target: "_blank", rel: "noreferrer noopener" }
+                    : {})}
+                  className="text-[0.9375rem] break-all"
+                >
+                  <span className="inline-flex items-center gap-2">
+                    <Ikon size={20} weight="regular" aria-hidden />
+                    {label}
+                  </span>
+                </TautanTeks>
+              </li>
+            ))}
+          </ul>
         </div>
       </Reveal>
     </section>

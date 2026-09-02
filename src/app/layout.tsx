@@ -1,29 +1,29 @@
 import type { Metadata } from "next";
-import { Archivo, Source_Serif_4 } from "next/font/google";
-import { GeistSans } from "geist/font/sans";
+import { Inter_Tight, Roboto_Mono } from "next/font/google";
 
 import { profil } from "@/content/profil";
 import "./globals.css";
 
-/** Huruf isi: serif teks. Dipakai untuk paragraf dan judul bagian, supaya
- *  halaman terbaca seperti terbitan, bukan seperti dasbor aplikasi. */
-const serif = Source_Serif_4({
+/** Satu huruf untuk semua tampilan dan isi, satu bobot saja. Hierarki
+ *  dipahat lewat ukuran dan rapatnya jarak huruf, bukan lewat tebal. */
+const tight = Inter_Tight({
   subsets: ["latin"],
+  weight: ["400"],
   display: "swap",
-  variable: "--font-serif",
+  variable: "--font-tight",
 });
 
-/** Huruf tampilan: grotesk yang bisa dilebarkan. Sekarang tinggal dipakai
- *  untuk nama besar di hero, nav, tombol, dan label kecil. */
-const archivo = Archivo({
+/** Huruf mesin ketik untuk label teknis: nav, penanda bagian, tombol,
+ *  dan keterangan kecil. Ini satu-satunya lawan bicara huruf utama. */
+const mono = Roboto_Mono({
   subsets: ["latin"],
-  axes: ["wdth"],
+  weight: ["400"],
   display: "swap",
-  variable: "--font-archivo",
+  variable: "--font-mono",
 });
 
 const deskripsi =
-  "Hengky (Henqiesoo). Guru SMK, kandidat dosen teologi, guru musik privat, dan pengajaran lewat kisah nyata.";
+  "Hengky (Henqiesoo). Guru SMK, kandidat dosen teologi, guru musik privat, pembuat website, dan pencerita kisah nyata.";
 
 /** Dipakai untuk menyusun URL mutlak pada kartu pratinjau. Di Vercel
  *  diisi otomatis; saat dijalankan lokal jatuh ke localhost. */
@@ -49,7 +49,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="id" className={`${GeistSans.variable} ${archivo.variable} ${serif.variable}`}>
+    <html lang="id" className={`${tight.variable} ${mono.variable}`}>
       <body>
         {/* Tanpa JavaScript, isi halaman tetap terbaca penuh. */}
         <noscript>

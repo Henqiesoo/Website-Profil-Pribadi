@@ -9,7 +9,7 @@ export const profil = {
 
   hero: {
     baris1: "Hengky",
-    baris2: ["Guru.", "Musisi.", "Pengajaran."],
+    baris2: ["Guru.", "Musisi.", "Pembuat web."],
     ringkasan:
       "Mengajar di dua SMK, membuka kelas musik privat, menyiapkan kelas teologi, dan menuliskan kisah nyata orang biasa.",
   },
@@ -233,7 +233,7 @@ export const profil = {
   kontak: {
     judul: "Terbuka untuk kelas musik baru, undangan mengajar, dan kerja sama konten.",
     catatan:
-      "Email paling cepat dibalas. Untuk kelas privat, sebutkan alat musik dan level murid supaya saya bisa langsung jawab jadwalnya.",
+      "WhatsApp paling cepat dibalas. Untuk kelas privat, sebutkan alat musik dan level murid supaya saya bisa langsung jawab jadwalnya.",
     // Ganti dengan alamat email dan nomor yang mau kamu pakai secara publik.
     email: "hengkypianister@gmail.com",
     whatsapp: {

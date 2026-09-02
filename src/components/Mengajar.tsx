@@ -12,11 +12,12 @@ export function Mengajar() {
   return (
     <section
       id="mengajar"
-      className="mx-auto max-w-[var(--shell)] px-6 pb-20 md:px-10 md:pb-28"
+      className="terang mx-auto max-w-[var(--shell)] px-6 pt-24 pb-24 md:px-10 md:pt-32 md:pb-16"
     >
       <Reveal>
         <div style={{ marginLeft: "var(--nudge-2)" }}>
-          <h2 className="d-1">{mengajar.judul}</h2>
+          <span className="penanda">02 / 06</span>
+          <h2 className="d-1 mt-6">{mengajar.judul}</h2>
           <p className="prose-body mt-5 text-ink-muted">{mengajar.catatan}</p>
         </div>
       </Reveal>
@@ -40,7 +41,7 @@ export function Mengajar() {
             {/* Tinggi disamakan, lebar dibiarkan beda. Sebelumnya rasio yang
                 sama pada lebar berbeda menyisakan lubang kosong di bawah dua
                 foto terakhir, dan itu terbaca belum jadi. */}
-            <figure className="angkat relative h-[clamp(17rem,30vw,25rem)] overflow-hidden rounded-[16px] bg-ground-sunk shadow-kartu">
+            <figure className="angkat relative h-[clamp(17rem,30vw,25rem)] overflow-hidden rounded-[16px] bg-ground-sunk ">
               <Image
                 src={f.src}
                 alt={f.alt}

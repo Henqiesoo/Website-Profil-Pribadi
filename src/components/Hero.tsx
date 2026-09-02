@@ -15,8 +15,10 @@ export function Hero() {
       id="atas"
       className="relative mx-auto flex min-h-[78svh] max-w-[var(--shell)] flex-col justify-center px-6 pt-10 pb-20 md:px-10 md:pt-16 md:pb-28"
     >
-      {/* Di layar kecil potret naik ke atas dan menabrak tepi kanan. */}
-      <div className="rise mb-10 -mr-10 ml-auto w-[9.5rem] md:hidden">
+      {/* Di layar kecil potret naik ke atas. Margin negatifnya dibuat persis
+          sebesar padding section supaya lingkarannya mencium tepi layar,
+          bukan melewatinya dan membuat halaman bisa digeser mendatar. */}
+      <div className="rise mb-10 -mr-6 ml-auto w-[9.5rem] md:hidden">
         <Potret />
       </div>
 
@@ -30,8 +32,10 @@ export function Hero() {
           </h1>
         </div>
 
+        {/* Dibatasi lebarnya di layar besar supaya baris ini berhenti
+            sebelum lingkaran potret, bukan tersapu di belakangnya. */}
         <p
-          className="rise d-1 mt-4 text-ink-muted"
+          className="rise d-1 mt-4 text-ink-muted md:max-w-[60%] lg:max-w-[58%]"
           style={{ marginLeft: "var(--nudge-1)", animationDelay: "150ms" }}
         >
           {hero.baris2.map((kata) => (

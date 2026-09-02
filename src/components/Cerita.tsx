@@ -25,8 +25,9 @@ export function Cerita() {
       <div className="mx-auto max-w-[var(--shell)] px-6 py-24 md:px-10 md:py-36">
         <div className="grid gap-14 md:grid-cols-12 md:gap-10">
           <div className="md:col-span-6" style={{ marginLeft: "var(--nudge-1)" }}>
-            <h2>
-              <Logo nada="terang" lebar={340} className="max-w-full" label="HENQIESOO" />
+            <span className="penanda">04 / 06</span>
+            <h2 className="mt-6">
+              <Logo nada="terang" lebar={320} className="max-w-full" label="HENQIESOO" />
               <span className="d-1 mt-5 block text-deep-ink">Storytelling</span>
             </h2>
           </div>

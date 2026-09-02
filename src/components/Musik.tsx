@@ -21,7 +21,8 @@ export function Musik() {
     >
       <Reveal>
         <div style={{ marginLeft: "var(--nudge-1)" }}>
-          <h2 className="d-1">{musik.judul}</h2>
+          <span className="penanda">05 / 06</span>
+          <h2 className="d-1 mt-6">{musik.judul}</h2>
           <p className="prose-body mt-5 text-ink-muted">{musik.catatan}</p>
         </div>
       </Reveal>
