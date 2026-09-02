@@ -17,7 +17,7 @@ export function Musik() {
   return (
     <section
       id="musik"
-      className="mx-auto max-w-[var(--shell)] overflow-hidden px-6 py-24 md:px-10 md:py-36"
+      className="mx-auto max-w-[var(--shell)] overflow-hidden px-6 py-20 md:px-10 md:py-28"
     >
       <Reveal>
         <div style={{ marginLeft: "var(--nudge-1)" }}>
@@ -41,7 +41,7 @@ export function Musik() {
             }
           >
             <figure
-              className="kartu overflow-hidden rounded-brand border border-line bg-ground-sunk shadow-kartu"
+              className="kartu overflow-hidden rounded-[14px] bg-ground-sunk shadow-kartu"
               style={
                 {
                   "--putar": f.putar,

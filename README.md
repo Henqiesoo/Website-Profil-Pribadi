@@ -99,6 +99,17 @@ Arahnya jendela bidik, diambil dari bingkai REC di logo sendiri.
   grotesk tampilan, isinya sans netral supaya daftar paket enak dipindai.
 - Tombol terisi membulat hanya di sudut bawah. Itu tanda khas sistemnya,
   bukan radius yang kelupaan.
+- Bingkai 1px dipakai sehemat mungkin. Foto dan kartu berdiri di atas
+  halaman dengan bayangan halus, bukan di dalam kotak bergaris. Halaman
+  yang penuh kotak terbaca kaku.
+- Foto utama bagian Mengajar memotong lebar layar lewat `.bentang`.
+  Perhitungannya pakai left/margin negatif, bukan margin-left 50 persen,
+  supaya padding section tidak ikut menggeser.
+- `.angkat` mengangkat foto dan kartu sedikit saat disentuh kursor. Itu
+  satu-satunya umpan balik fisik di halaman.
+- Judul bagian Profesi menempel selama barisnya digulir (`.judul-menempel`).
+- Jarak vertikal antar bagian sengaja tidak seragam. Sebelumnya semua
+  144/160px, dan keseragaman itu yang bikin iramanya datar.
 - Halaman ini sengaja satu nada: terang. Mode gelapnya dilepas karena
   membuat halaman jadi bidang hitam yang datar, tanpa pemisah antar bagian.
   `color-scheme: light` memberi tahu browser supaya permukaan bawaannya

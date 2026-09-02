@@ -12,7 +12,7 @@ export function Mengajar() {
   return (
     <section
       id="mengajar"
-      className="mx-auto max-w-[var(--shell)] px-6 pb-24 md:px-10 md:pb-40"
+      className="mx-auto max-w-[var(--shell)] px-6 pb-20 md:px-10 md:pb-28"
     >
       <Reveal>
         <div style={{ marginLeft: "var(--nudge-2)" }}>
@@ -22,13 +22,13 @@ export function Mengajar() {
       </Reveal>
 
       <Reveal delay={80}>
-        <figure className="mt-14 overflow-hidden rounded-brand border border-line bg-ground-sunk md:mt-20">
+        <figure className="bentang mt-14 overflow-hidden bg-ground-sunk md:mt-20">
           <Image
             src={mengajar.utama.src}
             alt={mengajar.utama.alt}
             width={mengajar.utama.w}
             height={mengajar.utama.h}
-            sizes="(min-width: 768px) 82rem, 100vw"
+            sizes="100vw"
             className="h-auto w-full object-cover"
           />
         </figure>
@@ -37,14 +37,16 @@ export function Mengajar() {
       <div className="mt-5 grid gap-5 md:mt-6 md:grid-cols-12 md:gap-6">
         {mengajar.lain.map((f, i) => (
           <Reveal key={f.src} delay={140 + i * 70} className={kolom[i % kolom.length]}>
-            <figure className="overflow-hidden rounded-brand border border-line bg-ground-sunk">
+            {/* Tinggi disamakan, lebar dibiarkan beda. Sebelumnya rasio yang
+                sama pada lebar berbeda menyisakan lubang kosong di bawah dua
+                foto terakhir, dan itu terbaca belum jadi. */}
+            <figure className="angkat relative h-[clamp(17rem,30vw,25rem)] overflow-hidden rounded-[16px] bg-ground-sunk shadow-kartu">
               <Image
                 src={f.src}
                 alt={f.alt}
-                width={f.w}
-                height={f.h}
+                fill
                 sizes="(min-width: 768px) 32vw, 100vw"
-                className="h-auto w-full object-cover"
+                className="object-cover"
               />
             </figure>
           </Reveal>

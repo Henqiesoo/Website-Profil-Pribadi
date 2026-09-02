@@ -13,7 +13,7 @@ export function Hero() {
   return (
     <section
       id="atas"
-      className="relative mx-auto max-w-[var(--shell)] px-6 pt-12 pb-24 md:px-10 md:pt-20 md:pb-40"
+      className="relative mx-auto flex min-h-[78svh] max-w-[var(--shell)] flex-col justify-center px-6 pt-10 pb-20 md:px-10 md:pt-16 md:pb-28"
     >
       {/* Di layar kecil potret naik ke atas dan menabrak tepi kanan. */}
       <div className="rise mb-10 -mr-10 ml-auto w-[9.5rem] md:hidden">
@@ -59,7 +59,10 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="rise pointer-events-none absolute top-[14%] -right-6 hidden w-[clamp(12rem,22vw,18rem)] md:block lg:-right-12">
+      {/* right-0 akan menempel ke tepi border section, bukan tepi isinya,
+          sehingga titik REC yang mengorbit terpotong layar. Jaraknya
+          disamakan dengan padding section. */}
+      <div className="rise pointer-events-none absolute top-1/2 right-6 hidden w-[clamp(13rem,24vw,19rem)] -translate-y-1/2 md:right-10 md:block lg:right-16">
         <Potret />
       </div>
     </section>

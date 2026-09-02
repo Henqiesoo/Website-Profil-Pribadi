@@ -222,6 +222,56 @@ body {
   font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
+/* Keluar dari lebar kolom sampai memenuhi lebar layar. Dipakai untuk foto
+   utama yang harus memotong halaman, bukan duduk manis di dalam kotak.
+   body memakai overflow-x: clip, jadi 100vw tidak memunculkan gulir.
+   Perhitungannya lewat left/margin negatif, bukan margin-left: 50%,
+   supaya padding section tidak ikut menggeser posisinya. */
+
+.bentang {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+/* Foto dan kartu terangkat sedikit saat disentuh kursor. Ini satu-satunya
+   umpan balik fisik di halaman: tanpa ini semuanya terasa seperti cetakan. */
+
+.angkat {
+  transition:
+    transform 340ms var(--ease-out),
+    box-shadow 340ms var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .angkat:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 50px -26px rgba(35, 38, 43, 0.45);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .angkat {
+    transition: none;
+  }
+  .angkat:hover {
+    transform: none;
+  }
+}
+
+/* Judul bagian yang menempel selama isinya digulir. Bagian Profesi dan
+   Jasa panjang; tanpa ini pembaca kehilangan konteks di tengah jalan. */
+
+@media (min-width: 768px) {
+  .judul-menempel {
+    position: sticky;
+    top: 7rem;
+  }
+}
+
 /* Pita permukaan. Sectionnya di tengah dan ada max-width, jadi latarnya
    direntangkan ke tepi layar lewat box-shadow lalu dipotong rapi. */
 

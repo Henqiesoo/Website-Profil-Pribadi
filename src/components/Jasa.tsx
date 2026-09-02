@@ -12,7 +12,7 @@ export function Jasa() {
   return (
     <section
       id="jasa"
-      className="lapis-kertas mx-auto max-w-[var(--shell)] px-6 pt-24 pb-24 md:px-10 md:pt-32 md:pb-40"
+      className="lapis-kertas mx-auto max-w-[var(--shell)] px-6 pt-28 pb-28 md:px-10 md:pt-44 md:pb-44"
       style={{ "--lapis": "var(--ground-sunk)" } as CSSProperties}
     >
       <Reveal>
@@ -25,7 +25,7 @@ export function Jasa() {
       <div className="mt-14 grid gap-5 md:mt-20 md:grid-cols-2 md:gap-8">
         {jasa.paket.map((p, i) => (
           <Reveal key={p.nama} delay={i * 80} className="h-full">
-            <article className="flex h-full flex-col rounded-brand border border-line bg-ground-warm p-7 md:p-9">
+            <article className="angkat flex h-full flex-col rounded-[16px] bg-ground-warm p-7 shadow-kartu md:p-9">
               <h3 className="d-2">{p.nama}</h3>
               <p className="d-2 mt-5 text-accent">{p.harga}</p>
               <p className="meta mt-3">{p.tempo}</p>
@@ -58,7 +58,7 @@ export function Jasa() {
           <Reveal key={p.src} delay={i * 90}>
             <article className="mt-10 grid items-center gap-6 border-t border-line pt-10 md:mt-14 md:grid-cols-12 md:gap-10 md:pt-14">
               <figure
-                className={`overflow-hidden rounded-brand border border-line bg-ground-sunk md:col-span-7 ${
+                className={`angkat overflow-hidden rounded-[16px] bg-ground-sunk shadow-kartu md:col-span-7 ${
                   i % 2 === 1 ? "md:order-2 md:col-start-6" : ""
                 }`}
               >
